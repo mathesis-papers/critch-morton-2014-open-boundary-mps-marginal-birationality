@@ -21,10 +21,10 @@
   "generator_version": "0.1.0",
   "sha256": {
     "CHANGELOG.md": "a0384d1a4839657cadf90c4a45fb07c75eab75253062d8c318841ceb8d041cc1",
-    "CITATION.cff": "fccd991a601967ed1237d4a1a110ab9a7b0b53dc61446bfcfb9a34c3642627f4",
+    "CITATION.cff": "e14bc56c4773cc968d4772dba189fd39e898787d677164a85020a7b5084958d2",
     "CONTRIBUTING.md": "fafd66e63160b2a88f433af56d2af2b0f7bf6ed2fd417d46b54446ce07c627ff",
     "LICENSES/CC-BY-4.0.txt": "58230517b7895aa219ff46a6ed63e67057a1582fb9ea054b16728a8c13525650",
-    "README.md": "5e3f405432c9357dde76ddf6d92ba10fa8911a01f2eb8bdf68489f0e9eae6983",
+    "README.md": "0d40d3015704b79a0058dbd900bd42c17965bec89757505fdd0590ddadf9f884",
     "formalization/nodes.json": "736244ede0467b0b29cfb08c3c3dd5ae9c5ca1085cfd4989868c19d80996d462",
     "manuscript/README.md": "3232dddc4ff01a3f720ef4e6dc82c91684d06342a6dc431b0c2c8aa20f3ca246",
     "manuscript/checks.json": "181e3f6705833d917e45d7b1ef3c1c2e5116041947b50c7d4a853fe8d46b32ee",
@@ -34,9 +34,9 @@
     "manuscript/source-manifest.json": "c35e0bc9a4459655b1da7a782d31c70a8adbe5a1e9f535d75e9758a595a4a02b",
     "manuscript/verify.py": "838a2216440118e5b01f0f0bd854726d57cdb97b379a16a24b245d18a41e7f49",
     "manuscript/verify_extensions.py": "bed8256a7f4f10963015cb3579bce349c27fa7f15b738a013731a17e3f98e18d",
-    "paper.json": "6ed0020175c6fa46dbe677daea52d61e0a3fe72fae2139068ad17b2c5ea969ea",
+    "paper.json": "7dc505861b6061f9c0d66e61cd85d01a9183d5d6b1d062a65a62c81d59e89538",
     "paper.pdf": "ed6c4554acc984e11f918aa1375ed11746a96eeb6e16ff3dcff92c368c3ef5a7",
     "source.archive": "26abbae10d3cb85ccfc9ee9b20b5910faa8acfa2cface14d6317d9a0fc002b3a"
   },
-  "snapshot_identity": "7a31fd69da561a927e7e1bc659937bb8b12dbacd0b00bbc9b8b9c958c513dc15"
+  "snapshot_identity": "2617b9feb4146f7b534d11e50e50d79e70089f87fee7d7b304660f5c8517192f"
 }

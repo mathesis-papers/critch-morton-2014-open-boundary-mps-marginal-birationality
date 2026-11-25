@@ -5,13 +5,15 @@
 We prove Critch–Morton Conjecture 8 (SIGMA 10 (2014), 095, Section 2, p. 6): every consecutive three-site improper marginalization is birational for open-boundary, translation-invariant, binary bond-two matrix product states of length N at least four. An explicit rational inverse over the complex numbers is given on a nonempty principal open domain, with both inverse identities on the affine Zariski closures. A four-by-four linear system reconstructs a three-site representation, and inverse boundary contractions restore omitted sites. Consequences include rationality in dimension seven, reconstruction from every longer consecutive block with arbitrary fixed nonzero site-dependent coherent contractions, minimality of three retained amplitude indices, and exact equations characterizing the reconstruction chart.
 
 - PDF: [frozen public file](paper.pdf)
+- DOI: [https://doi.org/10.5281/zenodo.24058061](https://doi.org/10.5281/zenodo.24058061)
+- Concept DOI: [https://doi.org/10.5281/zenodo.24058060](https://doi.org/10.5281/zenodo.24058060)
 - License: CC-BY-4.0
 - Version: 2
 - Mathesis record: [critch-morton-2014-open-boundary-mps-marginal-birationality](https://mathesis-omega-research.apps.chrono-ai.fun/papers/critch-morton-2014-open-boundary-mps-marginal-birationality?version=2)
 
 ## How to cite
 
-Haobo Ma, Wenlin Zhang (2026). Proof of Critch–Morton Conjecture 8 (SIGMA 10 (2014), 095, Section 2, p. 6): reconstruction from any consecutive three-site improper marginal. Mathesis, version 2. https://mathesis-omega-research.apps.chrono-ai.fun/papers/critch-morton-2014-open-boundary-mps-marginal-birationality?version=2
+Haobo Ma, Wenlin Zhang (2026). Proof of Critch–Morton Conjecture 8 (SIGMA 10 (2014), 095, Section 2, p. 6): reconstruction from any consecutive three-site improper marginal. Mathesis, version 2. https://doi.org/10.5281/zenodo.24058061
 
 ## Statement progress
 

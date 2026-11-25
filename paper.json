@@ -28,9 +28,9 @@
         "name": "Wenlin Zhang"
       }
     ],
-    "concept_doi": null,
+    "concept_doi": "10.5281/zenodo.24058060",
     "current_version": 2,
-    "doi": null,
+    "doi": "10.5281/zenodo.24058061",
     "lean_source": {
       "revision": "b95cdbb8cccca425964251ba38cc0b0e517e478a",
       "url": "https://github.com/the-omega-institute/trureturing/blob/b95cdbb8cccca425964251ba38cc0b0e517e478a/D5/S3/Quantum/TensorNetworks/OpenBoundaryMPSMarginalBirationality.lean"
