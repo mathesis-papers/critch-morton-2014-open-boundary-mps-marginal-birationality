@@ -1,0 +1,418 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,array,longtable}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,breaklinks=true]{hyperref}
+\usepackage{xurl}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newcommand{\C}{\mathbb C}
+\newcommand{\OB}{\operatorname{OB}}
+\newcommand{\adj}{\operatorname{adj}}
+\newcommand{\GL}{\operatorname{GL}}
+\title{Proof of Critch--Morton Conjecture 8\protect\\
+\large (SIGMA 10 (2014), 095, Section 2, p.\ 6):\protect\\
+Reconstruction from any consecutive three-site improper marginal}
+\author{Haobo Ma\\\small ChronoAI Pte Ltd, Singapore
+\and Wenlin Zhang\\\small National University of Singapore\\\small ChronoAI Pte Ltd, Singapore}
+\date{November 3, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We prove Critch--Morton Conjecture 8 (SIGMA 10 (2014), 095, Section 2, p.\ 6):
+every consecutive three-site improper marginalization is birational
+for open-boundary, translation-invariant, binary bond-two matrix product states
+of length $N\geq4$.
+We give an explicit rational inverse over $\C$, including a nonempty principal
+open domain and both inverse identities on the affine Zariski closures.
+A four-by-four linear system reconstructs a three-site representation; inverse
+powers of the sum of its two matrices then restore the omitted sites.
+Consequences include seven-dimensional rational models, reconstruction from
+any longer consecutive block with arbitrary fixed nonzero site-dependent
+coherent contractions, and explicit equations characterizing the reconstruction
+chart. Three retained amplitude indices are necessary for generic recovery.
+\end{abstract}
+
+\section{The affine statement}
+For $A_0,A_1\in\C^{2\times2}$, a row $\alpha\in\C^{1\times2}$,
+and a column $\beta\in\C^{2\times1}$, write
+\begin{equation}\label{eq:state}
+ \psi_w=\alpha A_{w_1}\cdots A_{w_N}\beta,
+ \qquad w\in\{0,1\}^N.
+\end{equation}
+Let $X_N=\overline{\OB(2,2,N)}$ be the affine Zariski closure of these
+amplitude tensors. This is the model of Critch and Morton~\cite[Section 2,
+equation (2)]{CM}. For $0\leq a\leq N-3$, put $b=N-3-a$ and define
+\begin{equation}\label{eq:marginal}
+ (\mu_a\psi)_{ijk}=\sum_{u\in\{0,1\}^a}\sum_{v\in\{0,1\}^b}\psi_{uijkv}.
+\end{equation}
+These are sums of complex amplitudes, not partial traces of density matrices.
+With $S=A_0+A_1$, distributivity gives the useful identity
+\begin{equation}\label{eq:outside}
+ (\mu_a\psi)_{ijk}=\alpha S^a A_iA_jA_k S^b\beta.
+\end{equation}
+In particular $\mu_a:X_N\to X_3$ is a polynomial map: it maps the parametrized
+model to the three-site model, and polynomial equations extend to its closure.
+
+\begin{theorem}\label{thm:main}
+For every $N\geq4$ and $0\leq a\leq N-3$, the map $\mu_a:X_N\to X_3$
+is birational. More precisely, there is a polynomial $g$ in the eight
+three-site coordinates such that $U=X_3\cap\{g\ne0\}$ is nonempty, and a
+rational map $F_{N,a}:U\to X_N$ is inverse to $\mu_a$ on
+$X_N\cap\{g\circ\mu_a\ne0\}$.
+The vanishing ideals of $X_N$ and $X_3$ are prime.
+\end{theorem}
+
+The analogue for binary hidden Markov models appears in
+Critch~\cite[Theorems 4.1 and 5.11]{HMM}. The free boundary vectors in
+\eqref{eq:state} require the two-sided correction in \eqref{eq:outside}; a
+stochastic normalization is not assumed here. Czapli\'nski, Micha\l{}ek and
+Seynnaeve~\cite[Section 3.4, Theorem 3.30 of the arXiv version]{CMS}
+settle the separate periodic identifiability Conjecture 12 of~\cite{CM}.
+More general boundary-matrix canonical forms are developed
+in~\cite[Sections 3--5]{FLAC}; our argument concerns the particular
+three-site map in \eqref{eq:marginal}. For periodic linear equations and
+their invariant-theoretic structure, see~\cite{LS}.
+
+\section{An explicit inverse and its proof}
+For $t=(t_{ijk})\in\C^8$, define the slices $T_j=(t_{ijk})_{i,k=0,1}$ and
+\begin{equation}\label{eq:kernel}
+ K(t)=\begin{pmatrix}
+ t_{000}&t_{001}&-t_{000}&-t_{100}\\
+ t_{010}&t_{011}&-t_{001}&-t_{101}\\
+ t_{100}&t_{101}&-t_{010}&-t_{110}\\
+ t_{110}&t_{111}&-t_{011}&-t_{111}
+ \end{pmatrix}.
+\end{equation}
+Let $H$ be its upper-left three-by-three submatrix, $d=\det H$, and
+let $c_j$ be the determinant obtained by replacing column $j$ of $H$
+by $-K_{\{0,1,2\},3}$, for $j=0,1,2$. Set
+\begin{align}
+ \widetilde\ell&=(c_2,d),& \widetilde z&=(c_0,c_1)^T,&
+ W_{ik}&=\sum_{j=0}^1\widetilde\ell_jt_{jik},\label{eq:raw}\\
+ N_j&=T_j\adj W,&J&=N_0+N_1,&\widetilde r&=W\widetilde z.\nonumber
+\end{align}
+All these quantities are polynomial in $t$. Our domain is specified by
+\begin{equation}\label{eq:g}
+ g=d\det W\det J\det T_0\,
+ (t_{000}t_{011}-t_{001}t_{010})\ne0.
+\end{equation}
+On this domain put
+\begin{equation}\label{eq:reconstruction}
+ \ell=\widetilde\ell/d,\quad z=\widetilde z/d,\quad B=W/d,
+ \quad M_j=T_jB^{-1},\quad r=Bz,\quad C=M_0+M_1.
+\end{equation}
+Then $B$ and $C$ are invertible, since
+$M_j=dN_j/\det W$ and $C=dJ/\det W$. The inverse in Theorem~\ref{thm:main} is
+\begin{equation}\label{eq:inverse}
+ F_{N,a}(t)_w=\ell C^{-a}M_{w_1}\cdots M_{w_N}C^{-b}r,
+ \qquad b=N-3-a.
+\end{equation}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+\emph{The quartic relation.}
+First take $t_{ijk}=lA_iA_jA_kr$. Define
+$P_{i,*}=lA_i$ and $Q_{*,k}=A_kr$, so $T_j=PA_jQ$.
+On the open set where $P,Q$ are invertible, put
+$e=lP^{-1}$ and $v=Q^{-1}r$. For each $i,j$ one has
+\begin{equation}\label{eq:relation}
+ \sum_k t_{ijk}v_k=lA_iA_jr=\sum_k e_kt_{kij}.
+\end{equation}
+Consequently $K(t)(v_0,v_1,e_0,e_1)^T=0$. This vector is nonzero since
+$Q$ invertible implies $r\ne0$. Thus $\det K(t)=0$ on that parameter open
+set. It is nonempty: $A_0=I$, $A_1=\left(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\right)$,
+$l=(1,0)$, $r=(1,0)^T$ give $P=Q=I$. The parameter space is affine
+and irreducible, so the polynomial $\det K(t)$ vanishes for all parameters,
+and therefore on $X_3$.
+
+\emph{Three-site reconstruction.}
+Cramer's rule applied to the first three rows of $K$ gives
+\begin{equation}\label{eq:cramer}
+ K(t)(c_0,c_1,c_2,d)^T=(0,0,0,\det K(t))^T.
+\end{equation}
+The last component follows by expanding the determinant in its last row.
+For $t\in U$, division by $d$ gives
+\begin{equation}\label{eq:compatibility}
+ \sum_k t_{ijk}z_k=\sum_k\ell_kt_{kij}=B_{ij}.
+\end{equation}
+The definition of $B$ also gives $\ell T_i=B_{i,*}$. Hence
+\begin{equation}\label{eq:normalized}
+ \ell M_i=e_i^T,\qquad M_kr=T_kz=B_{*,k},\qquad
+ \ell M_iM_jM_kr=(M_jB)_{ik}=t_{ijk}.
+\end{equation}
+Here $e_i$ is the $i$th coordinate column. Thus the reconstructed matrices
+and boundaries give exactly $t$ as a three-site tensor.
+
+\emph{A right inverse for every length and position.}
+Equation~\eqref{eq:inverse} is itself of the form~\eqref{eq:state}; it
+therefore belongs to the parametrized $N$-site model. Summing over the
+omitted sites multiplies its boundaries by $C^a$ and $C^b$.
+These powers cancel their inverses, and \eqref{eq:normalized} yields
+$\mu_aF_{N,a}(t)=t$ for every $t\in U$.
+
+\emph{Uniqueness on parametrized tensors.}
+Let $t=\mu_a\psi\in U$ with $\psi$ as in \eqref{eq:state}.
+Use $l=\alpha S^a$, $r_0=S^b\beta$, and form $P,Q$ as above with
+$r_0$ in place of $r$. Since $\det T_0\ne0$ and $T_0=PA_0Q$,
+both $P,Q$ are invertible. Define $e=lP^{-1}$ and $v=Q^{-1}r_0$.
+The first three rows of $K$ are independent, because $d\ne0$.
+Their kernel, and hence the kernel of $K$, is the line spanned by
+$(c_0,c_1,c_2,d)^T$. The nonzero vector $(v,e)$ lies on this line.
+Thus $s=e_1\ne0$, $\ell=s^{-1}e$, and $z=s^{-1}v$.
+It follows directly that
+\begin{equation}\label{eq:gauge}
+ B=s^{-1}PQ,\quad M_j=sPA_jP^{-1},\quad
+ r=s^{-2}Pr_0,\quad C=sPSP^{-1}.
+\end{equation}
+Invertibility of $C$ implies invertibility of $S$. Substituting
+\eqref{eq:gauge} in \eqref{eq:inverse} cancels the gauge matrices and
+gives the scalar factor
+$s^{-1-a+N-b-2}=1$, since $N=a+b+3$. The remaining expression is
+$\alpha A_{w_1}\cdots A_{w_N}\beta$. Therefore
+$F_{N,a}(\mu_a\psi)=\psi$ for every such parametrized tensor.
+
+\emph{Closure and nonemptiness.}
+Each $X_N$ is the closure of a polynomial image of an affine space,
+so is irreducible. Equivalently, its vanishing ideal is the kernel of
+the substitution homomorphism into the polynomial ring in the entries
+of $A_0,A_1,\alpha,\beta$. This ring is an integral domain, and a
+polynomial vanishing at all complex parameter values is zero. The
+kernel, and hence the vanishing ideal, is prime.
+
+The three-site tensor furnished by
+\begin{equation}\label{eq:witness}
+ A_0=\begin{pmatrix}1&2\\3&4\end{pmatrix},\quad
+ A_1=\begin{pmatrix}5&6\\7&8\end{pmatrix},\quad
+ l=(1,0),\quad r_0=(1,2)^T
+\end{equation}
+has lexicographically ordered coordinates
+$(145,349,337,829,489,1173,1193,2933)$. Its five factors in
+\eqref{eq:g} are respectively
+\[
+ 387072,\quad172598092627968,\quad-397666005414838272,
+ \quad-576,\quad2592.
+\]
+Thus $U$ is nonempty. Its inverse image under $\mu_a$ is nonempty by
+the right-inverse construction. The parametrized tensors are dense in
+$X_N$, and their intersection with this principal open subset is dense
+in that subset. Both $F_{N,a}\mu_a$ and the identity are regular there,
+so their coordinatewise equality extends from these parametrized tensors
+to the whole subset. The two displayed maps are therefore inverse
+isomorphisms of nonempty open subsets of the irreducible varieties.
+\end{proof}
+
+For explicit polynomial numerators and denominator, put $v=\det W$,
+$c=\det J$. Formula~\eqref{eq:inverse} becomes
+\begin{equation}\label{eq:polynomial}
+ F_{N,a}(t)_w=
+ \frac{\widetilde\ell(\adj J)^aN_{w_1}\cdots N_{w_N}
+ (\adj J)^b\widetilde r}{v^3c^{N-3}}.
+\end{equation}
+Indeed $\ell=d^{-1}\widetilde\ell$,
+$r=d^{-2}\widetilde r$, $M_j=(d/v)N_j$, and
+$C^{-1}=(v/(dc))\adj J$; the powers of $d$ cancel because $a+b=N-3$.
+The denominator is nonzero throughout $U$. This also makes the
+regularity used in the proof explicit.
+
+\section{Consequences}
+\begin{corollary}\label{cor:rational}
+For every $N\geq3$, $X_N$ is a rational variety of dimension seven.
+\end{corollary}
+\begin{proof}
+In the normalized three-site representation~\eqref{eq:normalized}, write
+$\ell=(x,1)$. The two identities $\ell M_i=e_i^T$ give
+\[
+ M_0=\begin{pmatrix}p&q\\1-xp&-xq\end{pmatrix},\qquad
+ M_1=\begin{pmatrix}u&v\\-xu&1-xv\end{pmatrix}.
+\]
+The seven free parameters $x,p,q,u,v,r_0,r_1$ define a polynomial
+map to $X_3$. Its image contains $U$ by the construction above.
+Conversely, if a tensor from these seven parameters lies in $U$,
+its matrix $P$ in the uniqueness argument is $I$ and $s=\ell_1=1$;
+equation~\eqref{eq:gauge} returns the identical parameters. The
+parameter preimage of $U$ is a nonempty open subset of $\C^7$,
+and these maps identify it with $U$. Thus $X_3$ is birational to
+$\C^7$; Theorem~\ref{thm:main} gives the assertion for $N\geq4$.
+\end{proof}
+
+\begin{corollary}\label{cor:weighted}
+Let $3\leq m\leq N$, and retain any consecutive block of $m$ sites.
+At each omitted site choose a fixed nonzero complex covector, allowing a
+different choice at every site. Contracting the omitted sites with these
+covectors defines a birational map $X_N\to X_m$.
+\end{corollary}
+\begin{proof}
+First let $m=3$, with $a$ omitted sites on the left and $b$ on the right.
+Write their ordered covectors as $\lambda^{(1)},\ldots,\lambda^{(a)}$
+and $\eta^{(1)},\ldots,\eta^{(b)}$, respectively, and put
+\[
+ L(A)=\prod_{h=1}^a(\lambda^{(h)}_0A_0+\lambda^{(h)}_1A_1),\qquad
+ R(A)=\prod_{h=1}^b(\eta^{(h)}_0A_0+\eta^{(h)}_1A_1),
+\]
+with products in site order and empty product $I$. Put $l=\alpha L(A)$ and
+$r_0=R(A)\beta$. The contracted tensor has coordinates $t_{ijk}=lA_iA_jA_kr_0$
+and belongs to $X_3$.
+On the nonempty open subset of $U$ where $L(M)$ and $R(M)$ are invertible,
+the inverse is
+\begin{equation}\label{eq:weighted-inverse}
+ t\longmapsto\bigl(\ell L(M)^{-1}M_{w_1}\cdots M_{w_N}R(M)^{-1}r\bigr)_w.
+\end{equation}
+The right-inverse identity follows by canceling $L(M),R(M)$.
+For uniqueness apply the gauge argument~\eqref{eq:gauge} to these boundaries.
+It gives
+$L(M)=s^aPL(A)P^{-1}$ and $R(M)=s^bPR(A)P^{-1}$;
+the same exponent $-1-a+N-b-2=0$ cancels all scalar factors.
+Equality extends to the closures exactly as in Theorem~\ref{thm:main}.
+
+To justify the additional open subset, each nonzero covector $\xi$ gives a
+nonzero polynomial $\det(\xi_0A_0+\xi_1A_1)$ in the matrix parameters:
+specialize $A_i=c_iI$ with $\xi_0c_0+\xi_1c_1\ne0$.
+Their finite product and the nonzero chart polynomial have simultaneous
+nonvanishing on the irreducible three-site parameter space. On that
+intersection~\eqref{eq:gauge} transfers invertibility to $M$.
+This proves nonemptiness for every fixed list of nonzero covectors.
+
+For $m>3$, follow the $m$-site contraction $\nu$ by the ordinary contraction
+$\sigma:X_m\to X_3$ retaining the first three sites of its block.
+The composite $\sigma\nu$ is a three-site contraction of the type just proved,
+with covector $(1,1)$ at the additional $m-3$ sites. Both $\sigma\nu$ and
+$\sigma$ are birational; hence $\nu=\sigma^{-1}(\sigma\nu)$ is birational.
+The case $m=N=3$ is the identity.
+\end{proof}
+
+\begin{corollary}\label{cor:minimal}
+For $N\geq3$, no coherent contraction retaining at most two binary sites
+is generically finite on $X_N$. Thus three is the least possible retained
+block size for generic amplitude recovery of these models.
+\end{corollary}
+\begin{proof}
+By Corollary~\ref{cor:rational}, $\dim X_N=7$; a tensor with at most two
+binary indices lies in an affine space of dimension at most four.
+The generic-fiber dimension theorem gives fiber dimension at least three.
+This assertion concerns amplitudes and does not compare reduced density operators.
+\end{proof}
+
+\begin{corollary}\label{cor:equations}
+For $N\geq4$ the $N-2$ quartics $\det K(\mu_a\psi)$ vanish on $X_N$,
+but their common zero set is strictly larger than $X_N$.
+Fix $a$, set $t=\mu_a\psi$, let $q=(\det W)^3(\det J)^{N-3}$,
+and let $p_w$ be the numerator in~\eqref{eq:polynomial}.
+On the ambient open subset $g(t)\ne0$, membership has the exact criterion
+\begin{equation}\label{eq:membership}
+ \psi\in X_N\quad\Longleftrightarrow\quad
+ \det K(t)=0\ \text{ and }\ q(t)\psi_w=p_w(t)\quad\text{for all }w.
+\end{equation}
+Every member of $X_N$ on this chart is an actual tensor of the form
+\eqref{eq:state}, not just a limit of such tensors.
+\end{corollary}
+\begin{proof}
+Equation~\eqref{eq:outside} and the quartic relation prove the vanishing.
+An affine zero locus defined by $N-2$ polynomials in $2^N$ variables has
+dimension at least $2^N-(N-2)$ by the principal ideal theorem. This exceeds
+seven for every $N\geq4$, so those quartics cannot define $X_N$ alone.
+For~\eqref{eq:membership}, the forward implication is the inverse identity.
+Conversely, Theorem 7 of~\cite{CM} identifies $X_3$ with $\det K=0$;
+thus $t\in U$ and $q(t)\ne0$. The remaining equations give
+$\psi=F_{N,a}(t)\in X_N$. Formula~\eqref{eq:inverse} supplies actual
+matrix and boundary parameters for every such point.
+\end{proof}
+
+\section{Source coverage and verification}
+The original posing source is the journal version of~\cite{CM}; its earlier
+preprint is arXiv:1210.2812v1 (October 10, 2012), Section II, p.\ 4,
+Conjecture 8. The same 22-term quartic already appears
+in~\cite[Section 2, p.\ 4 of the arXiv version]{PS}.
+The hidden-Markov birational result~\cite{HMM}
+precedes that source. For the distinct periodic Conjecture 12, the proof in
+\cite[Theorem 3.30]{CMS} was posted on April 16, 2019, and subsequently
+published in 2023. The coverage below distinguishes these prior results from
+the consequences proved here.
+
+\begin{longtable}{@{}p{0.29\linewidth}p{0.65\linewidth}@{}}
+\toprule
+Source item in~\cite{CM} & Coverage\\
+\midrule
+Conjecture 8, Section 2, p.\ 6 & Proved: Theorem~\ref{thm:main}, every length and every consecutive
+triple, on nonempty open subsets.\\
+Theorem 7, p.\ 6 & Prior proof cited: the full quartic hypersurface description.
+Proved here: $\det K$ vanishes and $X_3$ is rational of dimension seven
+(Corollary~\ref{cor:rational}).\\
+Paragraph before Conjecture 8, p.\ 6 & Proved: the $N-2$ quartic conditions;
+they are not sufficient globally. Corollary~\ref{cor:equations} supplies exact
+equations on the reconstruction chart.\\
+Postselection comment, p.\ 6 & Proved: arbitrary nonzero site-dependent
+coherent covectors and every retained block of length $m\geq3$
+(Corollary~\ref{cor:weighted}); three amplitude indices are minimal
+(Corollary~\ref{cor:minimal}).\\
+Conjecture 9, pp.\ 6--7 & Not covered: open-boundary reduced-density
+identifiability, including its minimality assertion.\\
+Conjecture 10, p.\ 7 & Not covered: periodic reduced-density identifiability,
+including its minimality assertion.\\
+Conjecture 12, p.\ 9 & Prior proof cited:~\cite[Theorem 3.30, arXiv version]{CMS};
+periodic trace-parameter identifiability, not Theorem~\ref{thm:main}.\\
+Questions 1 and 2, p.\ 2 & The general periodic representability and defining-ideal
+questions are not covered by the open-boundary reconstruction.\\
+Theorems 3, 4; Propositions 5, 6, 11; Sections 1 and 3 & Prior proofs cited
+in~\cite{CM}: periodic equations, homogeneity, symmetry and parametrization;
+not new consequences of the open-boundary argument.\\
+Section 3 HMM comparison; Section 4 extensions & Prior proof cited:
+\cite[Theorems 4.1, 5.11]{HMM} for the normalized HMM models.
+Larger bond/physical dimensions and other network types are not covered.\\
+\bottomrule
+\end{longtable}
+
+\paragraph{Lean and finite checks.}
+In the
+\href{https://github.com/the-omega-institute/trureturing/blob/b95cdbb8cccca425964251ba38cc0b0e517e478a/D5/S3/Quantum/TensorNetworks/OpenBoundaryMPSMarginalBirationality.lean}{pinned Lean file},
+the declaration \texttt{result} in the namespace
+\texttt{D5.S3.Quantum.TensorNetworks.}\allowbreak
+\texttt{OpenBoundaryMPSMarginalBirationality}
+has type \texttt{claim}. Its coverage is the two prime vanishing ideals and
+\texttt{IsBirationalVia}: polynomial $g,q,p_w$, a nonempty chart, a nonzero
+denominator and both inverse identities for every $N\geq4$, $a+3\leq N$.
+Equations~\eqref{eq:g} and~\eqref{eq:polynomial} match that chart and those
+rational coordinates. Corollaries~\ref{cor:rational}--\ref{cor:equations}
+are written consequences, not additional declarations of that file.
+The accompanying \texttt{verify.py} compares all coefficients of
+$\det K$ with the 22-term quartic in~\cite[Theorem 7]{CM}, checks the witness,
+and evaluates both inverse identities exactly for six rational parameter
+choices, all lengths $4$ through $8$, and every consecutive triple.
+Its 120 source cases, 120 target cases and 47,040 coordinate equalities
+are finite checks; the proof above supplies the all-length conclusion.
+The separate \texttt{verify\_extensions.py} checks ordered site-dependent
+contractions and longer-block reconstruction with exact rational arithmetic;
+its sample ranges and counts appear in \texttt{extension-checks.json}.
+
+\begin{thebibliography}{9}
+\bibitem{CM} A. Critch and J. Morton,
+\emph{Algebraic geometry of matrix product states},
+SIGMA \textbf{10} (2014), 095, 10 pp.
+\href{https://doi.org/10.3842/SIGMA.2014.095}{doi:10.3842/SIGMA.2014.095}.
+\bibitem{HMM} A. Critch,
+\emph{Binary hidden Markov models and varieties},
+J. Algebraic Statistics \textbf{4} (2013), 1--30.
+\href{https://arxiv.org/abs/1206.0500v3}{arXiv:1206.0500v3}.
+\bibitem{CMS} A. Czapli\'nski, M. Micha\l{}ek and T. Seynnaeve,
+\emph{Uniform matrix product states from an algebraic geometer's point of view},
+Adv. Appl. Math. \textbf{142} (2023), article 102417.
+\href{https://doi.org/10.1016/j.aam.2022.102417}{doi:10.1016/j.aam.2022.102417}.
+Theorem numbering here follows \href{https://arxiv.org/abs/1904.07563v1}{arXiv:1904.07563v1}.
+\bibitem{FLAC} M. Florido-Llin\`as, \'A. M. Alhambra,
+D. P\'erez-Garc\'ia and J. I. Cirac,
+\emph{Uniform matrix product states with a boundary},
+\href{https://arxiv.org/abs/2512.11968v1}{arXiv:2512.11968v1} (2025).
+\bibitem{LS} C. De Lazzari, H. J. Motwani and T. Seynnaeve,
+\emph{The linear span of uniform matrix product states},
+SIGMA \textbf{18} (2022), 099, 18 pp.
+\href{https://doi.org/10.3842/SIGMA.2022.099}{doi:10.3842/SIGMA.2022.099}.
+\bibitem{PS} L. Pachter and B. Sturmfels,
+\emph{Tropical geometry of statistical models},
+Proc. Natl. Acad. Sci. USA \textbf{101} (2004), 16132--16137.
+\href{https://doi.org/10.1073/pnas.0406010101}{doi:10.1073/pnas.0406010101}.
+The quartic locator follows \href{https://arxiv.org/abs/q-bio/0311009v2}{arXiv:q-bio/0311009v2}.
+\end{thebibliography}
+\medskip
+\noindent\small\textcopyright\ 2026 Haobo Ma and Wenlin Zhang.
+Licensed under \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International (CC BY 4.0)}.
+\end{document}

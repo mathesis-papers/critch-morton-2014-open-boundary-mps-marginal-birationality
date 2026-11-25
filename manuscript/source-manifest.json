@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "files": [
+    {
+      "name": "note.tex",
+      "bytes": 20741,
+      "sha256": "009a3fbf27bdc2d96a6e2575162790cd734c9a8801071bdaff8ed7d249d4345b"
+    },
+    {
+      "name": "README.md",
+      "bytes": 3420,
+      "sha256": "3232dddc4ff01a3f720ef4e6dc82c91684d06342a6dc431b0c2c8aa20f3ca246"
+    },
+    {
+      "name": "metadata.json",
+      "bytes": 2060,
+      "sha256": "bcf3176c0c887d2a60446add294b2d00926f65395d87b3f541036aebc0b308df"
+    },
+    {
+      "name": "verify.py",
+      "bytes": 11036,
+      "sha256": "838a2216440118e5b01f0f0bd854726d57cdb97b379a16a24b245d18a41e7f49"
+    },
+    {
+      "name": "checks.json",
+      "bytes": 981,
+      "sha256": "181e3f6705833d917e45d7b1ef3c1c2e5116041947b50c7d4a853fe8d46b32ee"
+    },
+    {
+      "name": "verify_extensions.py",
+      "bytes": 9058,
+      "sha256": "bed8256a7f4f10963015cb3579bce349c27fa7f15b738a013731a17e3f98e18d"
+    },
+    {
+      "name": "extension-checks.json",
+      "bytes": 1898,
+      "sha256": "61fd6f93426b8ace7c3724fcc58cf1751c366560cbdfb48048ed4fd6cd7bf4fb"
+    }
+  ]
+}

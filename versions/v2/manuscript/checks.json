@@ -1,0 +1,43 @@
+{
+  "arithmetic": "exact integers and rational numbers; Python standard library",
+  "quartic_coefficient_identity": {
+    "terms": 22,
+    "determinant_equals_source_quartic_times": 1
+  },
+  "parameter_samples": 6,
+  "lengths": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "windows": "every consecutive triple at each listed length",
+  "source_inverse_cases": 120,
+  "target_inverse_cases": 120,
+  "coordinate_equalities": 47040,
+  "witness_tensor_lexicographic": [
+    "145",
+    "349",
+    "337",
+    "829",
+    "489",
+    "1173",
+    "1193",
+    "2933"
+  ],
+  "witness_chart_factors": [
+    "387072",
+    "172598092627968",
+    "-397666005414838272",
+    "-576",
+    "2592"
+  ],
+  "witness_cramer_numerators": [
+    "118272",
+    "10752",
+    "-1161216"
+  ],
+  "scope": "The quartic coefficient identity is exhaustive; reconstruction evaluations cover only the listed samples and lengths. The general theorem has a written proof in note.tex.",
+  "status": "all equalities hold"
+}

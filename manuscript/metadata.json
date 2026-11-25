@@ -1,0 +1,15 @@
+{
+  "id": "critch-morton-2014-open-boundary-mps-marginal-birationality",
+  "revision": 2,
+  "problem_ids": ["critch-morton-2014-open-boundary-mps-marginal-birationality"],
+  "topic": "Critch–Morton Conjecture 8, SIGMA 10 (2014), 095, Section 2, p. 6",
+  "title": "Proof of Critch–Morton Conjecture 8 (SIGMA 10 (2014), 095, Section 2, p. 6): reconstruction from any consecutive three-site improper marginal",
+  "creators": [
+    {"name": "Ma, Haobo", "affiliation": "ChronoAI Pte Ltd, Singapore"},
+    {"name": "Zhang, Wenlin", "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"}
+  ],
+  "abstract": "We prove Critch–Morton Conjecture 8 (SIGMA 10 (2014), 095, Section 2, p. 6): every consecutive three-site improper marginalization is birational for open-boundary, translation-invariant, binary bond-two matrix product states of length N at least four. An explicit rational inverse over the complex numbers is given on a nonempty principal open domain, with both inverse identities on the affine Zariski closures. A four-by-four linear system reconstructs a three-site representation, and inverse boundary contractions restore omitted sites. Consequences include rationality in dimension seven, reconstruction from every longer consecutive block with arbitrary fixed nonzero site-dependent coherent contractions, minimality of three retained amplitude indices, and exact equations characterizing the reconstruction chart.",
+  "summary": "Any consecutive block of at least three amplitude indices generically determines an open-boundary binary bond-two MPS rationally, with arbitrary fixed nonzero coherent contractions at omitted sites. Three retained indices are necessary. The N−2 quartic conditions are insufficient globally; explicit reconstruction equations characterize membership on a nonempty chart.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/b95cdbb8cccca425964251ba38cc0b0e517e478a/D5/S3/Quantum/TensorNetworks/OpenBoundaryMPSMarginalBirationality.lean"
+}
