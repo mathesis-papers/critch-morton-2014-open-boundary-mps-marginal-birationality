@@ -31,6 +31,7 @@
     "concept_doi": "10.5281/zenodo.24058060",
     "current_version": 2,
     "doi": "10.5281/zenodo.24058061",
+    "kind": "note",
     "lean_source": {
       "revision": "b95cdbb8cccca425964251ba38cc0b0e517e478a",
       "url": "https://github.com/the-omega-institute/trureturing/blob/b95cdbb8cccca425964251ba38cc0b0e517e478a/D5/S3/Quantum/TensorNetworks/OpenBoundaryMPSMarginalBirationality.lean"
@@ -55,10 +56,12 @@
     "title": "Proof of Critch–Morton Conjecture 8 (SIGMA 10 (2014), 095, Section 2, p. 6): reconstruction from any consecutive three-site improper marginal",
     "versions": [
       {
+        "changelog": null,
         "previous_version": null,
         "published_on": "2026-11-25T18:48:08.994136973Z",
         "revision": "2",
-        "version": 2
+        "version": 2,
+        "version_label": null
       }
     ],
     "work": "critch-morton-2014-open-boundary-mps-marginal-birationality"
